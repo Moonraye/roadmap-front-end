@@ -1,0 +1,43 @@
+.content-box {
+  background-color: #111;
+  color: #ffffff;
+  padding: 10px;
+  border-radius: 12px;
+  text-align: center;
+  font-size: 18px;
+  min-height: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+      position: relative;
+}
+
+.content-box textarea {
+    width: 100%;
+    min-height: 100px;  
+    max-height: 400px;
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    resize: none;
+    box-sizing: border-box;
+    }
+.current-counter {
+    position: absolute;
+    bottom: 16px;
+    right: 24px;
+    color: black;
+    font-weight: 600;
+}
+
+.current-count {
+    color: black;
+    font-weight: 600;
+}
+textarea.error {
+    border-color: red;
+    border: 3px solid red;
+    transition: 0.1s all;
+}

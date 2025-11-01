@@ -8,20 +8,34 @@
     <link rel="stylesheet" href="/lesson 4/style/tabs-style.css">
     <link rel="stylesheet" href="/lesson 4/style/auth-form-style.css">
     <link rel="stylesheet" href="/lesson 4/style/cookie-style.css">
+    <link rel="stylesheet" href="/lesson 4/style/textarea-style.css">
     <title>Document</title>
 </head>
-
 <body>
     <div class="main-container">
         <div class="content-block authorization active" data-tab="block-1">
-            <h2 class="authorization-title">Authorization Form</h2>
+            <div id="form-1" class="login form-container active" data-tab="form-1">
+            <h2 class="authorization-title">Login Form</h2>
+            <span><button class="form-chooser to-registation" type="button" data-tab="form-2">Registration</button></span>
             <form class="authorization-form">
-                <label for="username">Username:</label>
-                <input type="text" id="username" name="username" required />
-                <label for="password">Password:</label>
-                <input type="password" id="password" name="password" required />
-                <button type="button" class="authorization-submit-btn">Login</button>
+                <label for="login-username">Username:</label>
+                <input type="text" id="login-username" name="login-username" required />
+                <label for="login-password">Password:</label>
+                <input type="password" id="login-password" name="login-password" required />
+                <button type="button" class="authorization-btn login">Login</button>
             </form>
+            </div>
+            <div id="form-2" class="registration form-container" data-tab = "form-2">
+                <h2 class="authorization-title">Registration Form</h2>
+                <span><button class="form-chooser to-login" type="button" data-tab="form-1">Login</button></span>
+                <form class="authorization-form">
+                    <label for="reg-username">Username:</label>
+                    <input type="text" id="reg-username" name="reg-username" required />
+                    <label for="reg-password">Password:</label>
+                    <input type="password" id="reg-password" name="reg-password" required />
+                    <button type="button" class="authorization-btn register">Register</button>
+                </form>
+            </div>
         </div>
         <div class="content-block tabs-container" data-tab="block-2">
             <div class="tabs-nav">
@@ -47,9 +61,12 @@
                 </div>
                 <div id="tab-3" class="tab-panel">
                     <div class="content-box">
-                        Third Tab content to be displayed here.
+                        <textarea maxlength="250" placeholder="Start typing..."></textarea>
+                        <div class="current-counter">
+                            <span class="current-count">0</span>/250
+                        </div>
                     </div>
-                </div>
+                </div>    
                 <div id="tab-4" class="tab-panel">
                     <div class="content-box">
                         Fourth Tab content to be displayed here.
@@ -71,6 +88,9 @@
     <script src="/lesson 4/scripts/script.js"></script>
     <script src="/lesson 4/scripts/tab-script.js"></script>
     <script src="/lesson 4/scripts/cookie-script.js"></script>
+    <script src="/lesson 4/scripts/textarea-script.js"></script>
+    <script src="/lesson 4/scripts/choose-auth-form-script.js"></script>
 </body>
+
 
 </html>

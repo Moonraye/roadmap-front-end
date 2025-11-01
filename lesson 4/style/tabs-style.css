@@ -14,6 +14,8 @@
 .tabs-nav {
   display: flex;
   border-bottom: 1px solid #e0e0e0;
+  align-items: center;
+  gap: 8px;
 }
 .tab-link {
   background: none;
@@ -58,6 +60,8 @@
   justify-content: center;
   align-items: center;
   box-sizing: border-box;
+  position: relative;
+
 }
 .footer-text {
   margin-top: 16px;
