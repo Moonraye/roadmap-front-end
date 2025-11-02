@@ -1,8 +1,9 @@
-document.addEventListener('DOMContentLoaded', function () {
+
     const authBlock = document.querySelector('.content-block.authorization');
     const tabsBlock = document.querySelector('.content-block.tabs-container');
     const STORAGE_KEY = 'app_user';
     const loginBtn = document.querySelector('.authorization-btn.login');
+    const logoutBtn = document.querySelector('.logout-btn');
     const loginUsername = document.getElementById('login-username');
     const loginPassword = document.getElementById('login-password');
     const registerBtn = document.querySelector('.authorization-btn.register');
@@ -57,4 +58,16 @@ document.addEventListener('DOMContentLoaded', function () {
             alert('Registration successful. Welcome, ' + username + '!');
         });
     }
-});
+        if (logoutBtn) {
+        logoutBtn.addEventListener('click', function () {
+            localStorage.removeItem(STORAGE_KEY);
+            alert ('You have been logged out. See you again!');
+            window.location.reload();
+        });
+    }
+
+
+
+
+    
+

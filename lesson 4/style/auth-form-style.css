@@ -35,7 +35,7 @@
   margin-bottom: 6px;
 }
 
-.authorization-form input[type="text"],
+.authorization-form input[type="email"],
 .authorization-form input[type="password"] {
   width: 100%;
   padding: 10px;
@@ -47,7 +47,7 @@
 }
 
 
-.authorization-form input[type="text"]:focus,
+.authorization-form input[type="email"]:focus,
 .authorization-form input[type="password"]:focus {
   outline: none;
   border-color: #007bff;

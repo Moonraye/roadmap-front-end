@@ -9,54 +9,77 @@
     <link rel="stylesheet" href="/lesson 4/style/auth-form-style.css">
     <link rel="stylesheet" href="/lesson 4/style/cookie-style.css">
     <link rel="stylesheet" href="/lesson 4/style/textarea-style.css">
+    <link rel="stylesheet" href="/lesson 4/style/accordion-style.css">
+    <link rel="stylesheet" href="/lesson 4/style/dropdown-style.css">
     <title>Document</title>
 </head>
+
 <body>
     <div class="main-container">
-        <div class="content-block authorization active" data-tab="block-1">
+        <!-- <div class="content-block authorization active" data-tab="block-1">
             <div id="form-1" class="login form-container active" data-tab="form-1">
-            <h2 class="authorization-title">Login Form</h2>
-            <span><button class="form-chooser to-registation" type="button" data-tab="form-2">Registration</button></span>
-            <form class="authorization-form">
-                <label for="login-username">Username:</label>
-                <input type="text" id="login-username" name="login-username" required />
-                <label for="login-password">Password:</label>
-                <input type="password" id="login-password" name="login-password" required />
-                <button type="button" class="authorization-btn login">Login</button>
-            </form>
+                <h2 class="authorization-title">Login Form</h2>
+                <span><button class="form-chooser to-registation" type="button"
+                        data-tab="form-2">Registration</button></span>
+                <form class="authorization-form">
+                    <label for="login-username">Email: </label>
+                    <input type="email" id="login-username" name="login-username" required />
+                    <label for="login-password">Password: </label>
+                    <input type="password" id="login-password" name="login-password" required />
+                    <button type="button" class="authorization-btn login">Login</button>
+                </form>
             </div>
-            <div id="form-2" class="registration form-container" data-tab = "form-2">
+            <div id="form-2" class="registration form-container" data-tab="form-2">
                 <h2 class="authorization-title">Registration Form</h2>
                 <span><button class="form-chooser to-login" type="button" data-tab="form-1">Login</button></span>
                 <form class="authorization-form">
-                    <label for="reg-username">Username:</label>
-                    <input type="text" id="reg-username" name="reg-username" required />
+                    <label for="reg-username">Email:</label>
+                    <input type="email" id="reg-username" name="reg-username" required />
                     <label for="reg-password">Password:</label>
                     <input type="password" id="reg-password" name="reg-password" required />
                     <button type="button" class="authorization-btn register">Register</button>
                 </form>
             </div>
-        </div>
-        <div class="content-block tabs-container" data-tab="block-2">
+        </div> -->
+        <div class="content-block tabs-container active" data-tab="block-2">
+            <span><button class="logout-btn" type="button">Log Out</button></span>
             <div class="tabs-nav">
                 <button class="tab-link active" data-tab="tab-1">First Tab</button>
                 <button class="tab-link" data-tab="tab-2">Second Tab</button>
                 <button class="tab-link" data-tab="tab-3">Third Tab</button>
                 <button class="tab-link" data-tab="tab-4">Fourth Tab</button>
             </div>
-            <p class="instructions">
-                Clicking each tab should hide the content of the other tab and show
-                the content of clicked tab. By default, enable the first tab.
-            </p>
             <div class="tabs-content">
                 <div id="tab-1" class="tab-panel active">
+                    <p class="instructions">
+                        Clicking each tab should hide the content of the other tab and show
+                        the content of clicked tab. By default, enable the first tab.
+                    </p>
                     <div class="content-box">
                         First Tab content to be displayed here.
                     </div>
+                    <Add class="footer-text">Add some dummy content or just add a simple text showing the tab</p>
                 </div>
                 <div id="tab-2" class="tab-panel">
-                    <div class="content-box">
-                        Second Tab content to be displayed here.
+                    <div class="accordion-container">
+                        <div class="accordion-item">
+                            <button type="button" class="accordion">Section 1</button>
+                            <div class="panel" data-tab="panel-1">
+                                <p>Content for section 1.</p>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <button type="button" class="accordion">Section 2</button>
+                            <div class="panel" data-tab="panel-1">
+                                <p>Content for section 2.</p>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <button type="button" class="accordion">Section 3</button>
+                            <div class="panel" data-tab="panel-1">
+                                <p>Content for section 3.</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div id="tab-3" class="tab-panel">
@@ -66,16 +89,42 @@
                             <span class="current-count">0</span>/250
                         </div>
                     </div>
-                </div>    
+                </div>
                 <div id="tab-4" class="tab-panel">
-                    <div class="content-box">
-                        Fourth Tab content to be displayed here.
+                    <div class=".drop-container">
+                        <div class="drop-item">
+                            <span class="drop-header">Lorem</span>
+                            <div class="drop-list">
+                                <ul>
+                                    <li>Ipsum</li>
+                                    <li>Apple</li>
+                                    <li>Math</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="drop-item">
+                            <span class="drop-header">Ipsoom</span>
+                            <div class="drop-list">
+                                <ul>
+                                    <li>Ipsum</li>
+                                    <li>Apple</li>
+                                    <li>Math</li>
+                                    <li>Orange</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="drop-item">
+                            <span class="drop-header">Spain</span>
+                            <div class="drop-list">
+                                <ul>
+                                    <li>Ipsum</li>
+                                    <li>Apple</li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-            <p class="footer-text">
-                Add some dummy content or just add a simple text showing the tab
-            </p>
         </div>
     </div>
     <div class="cookie-container hidden">
@@ -85,12 +134,12 @@
         </p>
         <button type="button" class="cookie-close-btn accept">Accept</button>
     </div>
-    <script src="/lesson 4/scripts/script.js"></script>
+    <!-- <script src="/lesson 4/scripts/authorization-script.js"></script> -->
     <script src="/lesson 4/scripts/tab-script.js"></script>
     <script src="/lesson 4/scripts/cookie-script.js"></script>
+    <script src="/lesson 4/scripts/accordion-script.js"></script>
     <script src="/lesson 4/scripts/textarea-script.js"></script>
     <script src="/lesson 4/scripts/choose-auth-form-script.js"></script>
 </body>
-
 
 </html>
