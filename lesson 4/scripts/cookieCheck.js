@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', function() {
+function initializeCookie(){
     const cookie = document.querySelector('.cookie-container');
     const cookieCloseBtn = document.querySelector('.cookie-close-btn');
     const cookieKey = 'cookieAccepted';
@@ -7,9 +7,9 @@ document.addEventListener('DOMContentLoaded', function() {
     if (storedValue === 'true') cookie.classList.add('hidden');
     if (localStorage.getItem(cookieKey) !== 'true') cookie.classList.remove('hidden');
     cookieCloseBtn.addEventListener('click', function() {
-    console.log('--- Натиснуто кнопку "Закрити" (Accept) ---');
+    console.log('Натиснуто кнопку "Закрити"');
     cookie.classList.add('hidden');
     localStorage.setItem(cookieKey, 'true');
-    console.log('-> Дія: Зберегли "true" в localStorage.');
-    }); 
-});
+    console.log('Зберегли "true" в localStorage.');
+    });
+}

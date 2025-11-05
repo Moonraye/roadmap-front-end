@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', () => {
+function initializeFormChooser(){    
     const allForms = document.querySelectorAll('.form-container');
     const formChooser = document.querySelectorAll('.form-chooser');
     function chooseForm(event) {
@@ -10,4 +10,4 @@ document.addEventListener('DOMContentLoaded', () => {
         if (panel) panel.classList.add('active');
     }
     formChooser.forEach(tab => tab.addEventListener('click', chooseForm));
-});
+}

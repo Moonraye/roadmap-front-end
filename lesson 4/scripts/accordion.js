@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', () => {
+function initializeAccordion(){
     const allAccordionItems = document.querySelectorAll('.accordion-item');
     const allPanels = document.querySelectorAll('.panel');
     const allButtons = document.querySelectorAll('.accordion-item > button');
@@ -12,9 +12,8 @@ document.addEventListener('DOMContentLoaded', () => {
         //     panel.classList.add('active');
         //     clickedButton.classList.add('active');
         // }
-        
         clickedButton.classList.toggle('active'); // Якщо необхідно залишити таку можливість
         panel.classList.toggle('active');
     }
     allButtons.forEach(button => button.addEventListener('click', toggleAccordion));
-});
+}
